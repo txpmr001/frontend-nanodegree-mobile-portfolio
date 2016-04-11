@@ -405,7 +405,7 @@ var resizePizzas = function(size) {
   // For optimization, functions changeSliderLabel, determineDX, sizeSwitcher, & changePizzaSizes
   // were replaced by the following code segment: 
   // Change the value for the size of the pizza above the slider
-  sizeIndex = Number(size) - 1;
+  var sizeIndex = Number(size) - 1;
   var sizes = ['Small', 'Medium', 'Large'];
   var newSize = sizes[sizeIndex];
   document.getElementById("pizzaSize").innerHTML = newSize;  
