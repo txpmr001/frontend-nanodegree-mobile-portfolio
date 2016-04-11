@@ -3,6 +3,8 @@ The distribution version of this project is hosted on a github project page here
 
 <a href="http://txpmr001.github.io/frontend-nanodegree-mobile-portfolio/">http://txpmr001.github.io/frontend-nanodegree-mobile-portfolio/</a>
 
+  (loads page dist/index.html)
+
 #### Optimizations
 
 Performance optimizatons in index.html:
@@ -22,12 +24,19 @@ Optimization of resizing pizzas in main.js:
   1. in function resizePizzas:  
   functions changeSliderLabel, determineDX, sizeSwitcher, & changePizzaSizes were replaced by a simple code segment 
 
-#### Using grunt to generate dist files from src files
+#### Grunt
+
+This project uses grunt to maintain separate 'src' and 'dist' directories.
+The 'dist' directory contains minified and compressed versions of images, css, and javascript files.
+
+Directions for using grunt to generate dist files from src files:
+
   1. 'npm install' creates the node_modules directory
   2. 'grunt imagemin' creates the minified image files
   3. 'grunt cssmin' creates the minified css files
   4. 'grunt uglify' creates the minified javascript files
   5. 'grunt copy' copies the html files
+  6. (optional) 'grunt build' runs imagemin, cssmin, uglify, and copy
 
 #### Original Project Instructions
 
