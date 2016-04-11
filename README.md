@@ -1,3 +1,36 @@
+
+The distribution version of this project is hosted on a github project page here:
+
+<a href="http://txpmr001.github.io/frontend-nanodegree-mobile-portfolio/">http://txpmr001.github.io/frontend-nanodegree-mobile-portfolio/</a>
+
+#### Optimizations
+
+Performance optimizatons in index.html:
+
+  1. use scaled and compressed images
+  2. make style.css, print.css, & perfmatters.js internal
+  3. remove link to google fonts
+  4. make google analytics javascript load async
+
+Optimization of scrolling in main.js:
+
+  1. in function updatePositions:  
+  document.body.scrollTop & part of phase calculation moved outside the loop
+
+Optimization of resizing pizzas in main.js:
+
+  1. in function resizePizzas:  
+  functions changeSliderLabel, determineDX, sizeSwitcher, & changePizzaSizes were replaced by a simple code segment 
+
+#### Using grunt to generate dist files from src files
+  1. 'npm install' creates the node_modules directory
+  2. 'grunt imagemin' creates the minified image files
+  3. 'grunt cssmin' creates the minified css files
+  4. 'grunt uglify' creates the minified javascript files
+  5. 'grunt copy' copies the html files
+
+#### Original Project Instructions
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
