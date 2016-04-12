@@ -28,8 +28,10 @@ Optimization of resizing pizzas in main.js:
 
 This project uses grunt to maintain separate 'src' and 'dist' directories.
 The 'dist' directory contains minified and compressed versions of images, css, and javascript files.
+Files 'package.json' and 'Gruntfile.js' in the project root directory are used by grunt.
 
-Directions for using grunt to generate dist files from src files:
+Directions for using grunt to generate 'dist' files from 'src' files:<br>
+(run these commands from the project's root directory)
 
   1. 'npm install' creates the node_modules directory
   2. 'grunt imagemin' creates the minified image files
