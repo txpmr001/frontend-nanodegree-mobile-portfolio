@@ -461,13 +461,13 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  // original janky version:
+  // Original janky version:
   //var items = document.querySelectorAll('.mover');
   //for (var i = 0; i < items.length; i++) {
   //  var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
   //  items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   //}
-  // optimized version with document.body.scrollTop & part of phase calculation
+  // Optimized version with document.body.scrollTop & part of phase calculation
   // moved outside the loop:
   var scrollTopTerm = document.body.scrollTop / 1250;
   var elements = document.getElementsByClassName('mover');
@@ -490,10 +490,13 @@ function updatePositions() {
 window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
+// Optimized by making the number of sliding pizzas dynamic based on screen.height
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  var rows = Math.ceil(screen.height / 256);
+  numSliders = cols * rows;
+  for (var i = 0; i < numSliders; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.232x.min.png";
