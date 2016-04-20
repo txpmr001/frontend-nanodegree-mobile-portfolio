@@ -16,13 +16,23 @@ Performance optimizatons in index.html:
 
 Optimization of scrolling in main.js:
 
-  1. in function updatePositions:  
-  document.body.scrollTop & part of phase calculation moved outside the loop
+ - in function updatePositions the following items were moved outside the loop:
+
+   - document.body.scrollTop & part of phase calculation
+   - assignment for elements.length
+   - var phase declaration
+
+ - in document.addEventListener:
+
+   - made number of sliding pizzas dynamic based on screen.height 
+   - moved var elem declaration outside the loop
+   - changed querySelector for 'movingPizzas1' to getElementById and moved it outside the loop
 
 Optimization of resizing pizzas in main.js:
 
-  1. in function resizePizzas:  
-  functions changeSliderLabel, determineDX, sizeSwitcher, & changePizzaSizes were replaced by a simple code segment 
+ - in function resizePizzas: 
+
+   - functions changeSliderLabel, determineDX, sizeSwitcher, &  changePizzaSizes were replaced by a simple code segment
 
 #### Grunt
 
@@ -115,3 +125,4 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+
