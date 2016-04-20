@@ -1,3 +1,4 @@
+"use strict";
 /*
 Welcome to the 60fps project! Your goal is to make Cam's Pizzeria website run
 jank-free at 60 frames per second.
@@ -499,7 +500,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   var rows = Math.ceil(screen.height / 256);
-  numSliders = cols * rows;
+  var numSliders = cols * rows;
   var elem;
   var movingPizzas = document.getElementById("movingPizzas1");
   for (var i = 0; i < numSliders; i++) {
