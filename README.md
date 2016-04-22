@@ -34,6 +34,12 @@ Optimization of resizing pizzas in main.js:
 
    - functions changeSliderLabel, determineDX, sizeSwitcher, &  changePizzaSizes were replaced by a simple code segment
 
+####Additional Changes
+
+Modifications to dynamically generating pizzas on load in main.js:
+
+ - This section no longer calls function pizzaElementGenerator. It now clones an html template (display:none) from pizza.html (div id='pizzaX'), modifies the dynamic elements, and appends to the dom.
+ 
 #### Grunt
 
 This project uses grunt to maintain separate 'src' and 'dist' directories.
@@ -126,3 +132,4 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
 
+> Written with [StackEdit](https://stackedit.io/).
