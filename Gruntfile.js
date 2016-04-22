@@ -32,10 +32,11 @@ module.exports = function(grunt) {
         },       
 
         jshint: {
+            globalstrict: true,
             options: {
                 reporterOutput: 'jshint.log'
             },
-            all: ['Gruntfile.js', 'src/js/*.js', 'src/views/js/*.js']
+            all: ['Gruntfile.js', 'src/js/perfmatters.js', 'src/views/js/main.js']
         },
 
         uglify: {
