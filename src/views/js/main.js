@@ -428,10 +428,21 @@ var resizePizzas = function(size) {
 
 window.performance.mark("mark_start_generating"); // collect timing data
 
+/* This section no longer calls pizzaElementGenerator. It now clones a template from
+ * pizza.html (div id='pizzaX'), modifies the dynamic elements, and appends to the dom.
+ */
+var $target = $('#randomPizzas'); // this is where we put the pizzas
+var $template = $('#pizzaX').clone(); // this is our template from the html for creating pizzas
+var $clone; // we use this var for each new pizza
+
 // This for-loop actually creates and appends all of the pizzas when the page loads
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
-  pizzasDiv.appendChild(pizzaElementGenerator(i));
+  $clone = $template.clone(); // create the new pizza elements
+  $clone.attr('id', 'pizza' + i); // change the name
+  $clone.css('display', ''); // make it visible
+  $clone.find('h4').text(randomName()); // add a random name
+  $clone.find('ul').html(makeRandomPizza()); // add random ingredients
+  $target.append($clone); // add to the dom
 }
 
 // User Timing API again. These measurements tell you how long it took to generate the initial pizzas
