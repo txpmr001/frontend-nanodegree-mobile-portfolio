@@ -105,6 +105,16 @@
           </div>
         </div>
         <div id="randomPizzas" class="row">
+          <!-- pizzaX is a display:none template for dynamically creating new pizzas -->
+          <div id="pizzaX" class="randomPizzaContainer" style="width: 33.33%; height: 325px; display: none;">
+            <div class="col-md-6">
+              <img src="images/pizza.232x.min.png" class="img-responsive" alt="Pizza">
+            </div>
+            <div class="col-md-6">
+              <h4></h4>   <!-- name added dynamically --> 
+              <ul></ul>   <!-- ingredients added dynamically -->
+            </div>
+          </div>
           <div id="pizza0" class="randomPizzaContainer" style="width:33.33%;">
             <div class="col-md-6">
               <img src="images/pizza.232x.min.png" class="img-responsive" alt="Pizza">
@@ -140,6 +150,7 @@
     </div>
     <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
   </div>
+  <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
   <script type="text/javascript" src="js/main.min.js"></script>
 </body>
 
